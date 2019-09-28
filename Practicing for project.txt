@@ -1,0 +1,29 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+  int x = 7;
+  int y = 42;
+  int *ip = &x;
+  std::cout <<"The value of x: "<< x << std::endl;
+  std::cout <<"The vaule of y: "<< y << std::endl;
+  std::cout <<"The value of *ip: "<< *ip << std::endl;
+
+  char s[] = "String"; 
+
+  for(char i = 0; s[i] != 0; i++){
+    std::cout <<"Char is: "<< s[i] << std::endl;
+  }
+  char constanant[] = "BCDFGHJKLMNPQRSTVWXZ";
+  char vowels[] = "AEIOUY";
+
+  std::ifstream file("sentences.txt");
+  std::string str;
+
+  while (std::getline(file, str)) {
+    std::cout << str<< std::endl;
+  }
+    }
+  
